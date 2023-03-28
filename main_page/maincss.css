@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --trs-main: .2s ease;
+    --trs-hum: 0.5s ease;
+}
+
+.hum_box{
+    position: absolute;
+    transform: translateX(100%);
+    transition: var(--trs-hum);
+    opacity: 0;
+}
+
+.hum_box .box_wrapper .hum_list li:hover{
+    background: #00000017;
+    transition: var(--trs-main);
+}
+
+.hum_btn
+{
+    display: none;
+    cursor: pointer;
+}
+
+nav{
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+}
+
+nav .navbar{
+    align-items: center;
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav .navbar .logo
+{
+    height: 50px;
+    width: 50px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .navbar .nav_list{
+    display: flex;
+    list-style-type: none;
+    width: 280px;
+    justify-content: space-between;
+}
+
+nav .navbar .nav_list li{
+    font-size: 20px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.594);
+    transition: 0.2s all ease;
+}
+
+nav .navbar .nav_list li:hover{
+    transition: 0.2s all ease;
+    color: black;
+}
+
+@media (max-width:400px){
+    nav .navbar .nav_list
+    {
+        transition: 0.3s all ease;
+        display: none;
+    }
+
+    .hum_btn
+    {
+        display: block;
+    }
+}
